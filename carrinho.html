@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizando seu Pedido!</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/impressao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="pedido">
+            <section class="carrinho">
+                <h2>CARRINHO:</h2>
+                <div id="carrinho"></div>
+            </section>
+            <section class="botoes">
+                <div id="totalCarrinho"><p>Total do Carrinho: R$ 0.00</p></div>
+                <button class="limparcarrinhobtn" onclick="executarAcoesNovo()">NOVO</button>
+                <button id="back" onclick="redirecionarParaOPedido()">EDITAR</button>
+        
+                <div class="confirmar">
+                    <button id="btnmostrar" class="confirmarpedido" onclick="executarAcoesConfirmar()">CONFIRMAR</button>
+                </div>
+            </section>
+        </section>
+
+        <div class="pedidoconfirmado"> 
+            <div class="icone">
+                <img src="imagens/check.png" alt="check">
+            </div>
+        </div>
+
+        <section class="mostrar"> 
+            <div class="bomapetite">
+                <div class="img">
+                    <img src="imagens/logo_mendes.png" alt="logo_vendas">
+                </div>
+                <p>Bom apetite!</p>
+            </div>
+
+            <div class="numpedido">
+                <p id="txtPedido">PEDIDO N°</p>
+                <p id="idPedido"></p>
+                <p id="nomeCliente"></p>
+                <p id="totalPedido"></p>
+            </div>
+
+            <div class="aviso">
+                <ul>
+                    <li>Por favor, entregue seu comprovante no caixa 1 para efetuar o pagamento.</li>
+                    <li>Apos feito, retire os itens no caixa 2.</li>
+                </ul>
+            </div>
+
+            <button class="voltar" onclick="retornarTelaPrincipal()"><img src="imagens/home.png" alt="home"></button>
+            <button class="imprimir2via" onclick="imprimir2via()"><img src="imagens/print.jpg" alt="home"></button>
+            
+        </section>
+    </main>
+
+    <div class="cupom">
+        <p id="horaPedido"></p>
+        <p id="dataPedido"></p>
+        <br>
+        <p id="idPedidoCupom">PEDIDO N°</p>
+        <br>
+        <div class="cupomcarrinho"></div>
+        <br>
+        <p id="nomeClienteCupom"></p>
+        <p id="totalPedidoCupom"></p>
+    </div>
+    
+    <script src="js/carrinho.js"></script>
+</body>
+</html>

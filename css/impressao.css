@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@media print {
+    main{
+        display: none;
+    }
+    
+    .cupom{
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #idPedidoCupom{
+        display: inline-block;
+        font-weight: bolder;
+        font-size: 1.8em;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .cupomcarrinho{
+        font-size: 14px;
+    }
+
+    #totalPedidoCupom{
+        margin-top: 10px;
+        font-weight: bolder;
+        font-size: 1em;
+    }
+
+    footer{
+        display: none;
+    }
+
+    #dataPedido{
+        float: left;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    #horaPedido{
+        float: right;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+}

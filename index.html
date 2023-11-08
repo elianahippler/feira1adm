@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas Vindas!</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo_fatech.jpeg" alt="logo_vendas" id="abc">
+        
+        <h1>Fatech</h1>
+
+        <div class="subtitulo">
+            <p class="p1">Feira de</p>
+            <p class="p2">Administração e Tecnologia</p>
+            <p class="p3">Colégio Estadual Mendes Gonçalves</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="boasvindas">
+            <p class="p1">Bem-vindo(a) ao Colégio Estadual Mendes Gonçalves, será um prazer atendê-lo(a).</p>
+            <p class="p2">Vamos começar? Faça seu pedido clicando no botão abaixo!</p>
+        </div>
+
+        <div class="pedir">
+            <input type="button" onclick="redirecionarParaPedido()" value="Pedir">
+        </div>
+    </main>
+
+    <aside class="map">
+        <div class="pt1"></div>
+        <div class="pt1"></div>
+        <div class="pt1"></div>
+    </aside>
+
+    <footer>
+        <p>Desenvolvido por Eliana Cristina Hippler da Silva - 3° CTI - Feira Mercadológica 2023</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script>
+        document.getElementById('abc').addEventListener('click', limparLocalStorage);
+        
+        function limparLocalStorage() {
+            localStorage.clear();
+            console.log('LocalStorage Limpo');
+        }
+    </script>
+</body>
+</html>

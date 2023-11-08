@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: absolute;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url(../imagens/fundo.png);
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Cantarell', sans-serif;
+}
+
+main{
+    padding-top: 4px;
+}
+   
+main .montarpedido .mensagem{
+    text-shadow: 2px 2px 8px #00000044;
+    color: white;
+    width: 60vw;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 14px auto;
+    font-size: 25px;
+    font-size: bolder;
+    padding-bottom: 6px;
+}
+
+.vitrine{
+    width: 1240px;
+    height: 600px;
+    margin: auto;
+}
+
+#produtosLanches h2, #produtosBebidas h2{
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    text-shadow: 2px 2px 8px #00000088;
+    box-shadow: 2px 2px 8px #0000004f;
+    width: 100%;
+    border-radius: 18px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#produtosLanches, #produtosBebidas{
+    width: 550px;
+    margin-left: 4%;
+    display: grid;
+    float: left;
+}
+
+.produto-single{
+    font-family: 'Manrope', sans-serif;
+    display: inline;
+    background-color: #ffffff0c;
+    color: white;
+    box-shadow: 2px 2px 8px #0000004f;
+    border-radius: 18px;
+    height: 123px;
+    width: 100%;
+    border: 3px solid #36006813;
+    margin-bottom: 10px;
+}
+
+.produto-single img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 18px;
+    margin: 10px;
+    display: block;
+}
+
+.produto-single .nomeproduto{
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    display: block;
+}
+
+.produto-single .precoproduto{
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    color: #ffffffa4;
+    width: 30%; 
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btnrmv{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+    .btnrmv:hover, .btnadd:hover{
+        transition: 0.5s;
+        cursor: pointer;
+        background-color: #fc891d;
+        border: 2px solid  #f88316;
+        color: black;
+        box-shadow: 2px 2px 8px #0000002c;
+    }
+
+    .btnrmv:active, .btnadd:hover{
+        background-color: #f8a251;
+        border: 2px solid  #ffa047;
+        color: rgb(53, 53, 53);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.486);
+    }
+
+.btnadd{ 
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+    
+.quantidade-no-carrinho{
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carrinho{
+    display: none;
+}
+
+.selecionado {
+    border: 3px solid rgba(255, 166, 0, 0.534);
+}
+
+#container{
+    height: 90px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    width: 1240px;
+    margin: auto;
+}
+
+.nome{
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    text-shadow: 2px 2px 8px #00000088;
+    box-shadow: 2px 2px 8px #0000004f;
+    float: left;
+    margin-left: 4%;
+    font-size: 1.2em;
+    width: 540px;
+    height: 57px;
+    border-radius: 18px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.123);
+}
+
+.nomecompleto{
+    padding: 10px 10px;
+    margin-left: 10px;
+    width: 180px;
+    text-align: left;
+    display: block;
+    float: left;
+}
+
+.nome input[type="text"]{
+    background-color: #c4bebe36;
+    border: 2px solid #000000da;
+    padding: 10px 0px;
+    margin-top: 7px;
+    width: 300px;
+    border-radius: 12px;
+    text-indent: 18px;
+    margin-right: 8px;
+    display: block;
+    float: right;
+    border-radius: 12px;
+}
+
+.nome input[type="text"]::placeholder{
+    color: black;
+}
+
+.nome input[type="text"]:hover{
+    cursor: pointer;
+    background-color: #e7e7e780;
+    box-shadow: 4px 4px 10px #0000003f;
+    border: 2px solid black;
+}
+
+.nome input[type="text"]:focus-within{
+    background-color: #e7e7e7b6;
+    cursor: auto;
+}
+
+.nome input[type="submit"]{
+    display: none;
+}
+
+.limparcarrinhobtn{
+    margin-left: 180px;
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    width: 100px;
+    float: left;
+    height: 57px;
+    border-radius: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+
+.limparcarrinhobtn:hover{
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #fc891d;
+    border: 2px solid  #f88316;
+    color: black;
+    box-shadow: 2px 2px 8px #0000002c;
+}
+
+.limparcarrinhobtn:active{
+    background-color: #f8a251;
+    border: 2px solid  #ffa047;
+    color: #353535;
+    box-shadow: 2px 2px 8px #0000007c;
+}
+
+#visualizarPedidoButton{
+    cursor: pointer;
+    background-color: #fa7900;
+    border: 2px solid  #f07401;
+    color: #000000c5;
+    box-shadow: 2px 2px 8px #0000002c;
+    float: right;
+    margin-right: 2%;
+    display: block;
+    width: 320px;
+    height: 57px;
+    border-radius: 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#visualizarPedidoButton:hover{
+    background-color: #e45b00;
+    border: 2px solid  #e45b00;
+    color: black;
+    box-shadow: 4px 4px 10px #0000005d;
+}
+
+#visualizarPedidoButton:active{
+    background-color: #ff891b;
+    border: 2px solid  #ff7b00;
+    color: black;
+    box-shadow: 4px 4px 10px #00000069;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track-piece {
+    cursor: pointer;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #413d38;
+    border-radius: 5px;
+}

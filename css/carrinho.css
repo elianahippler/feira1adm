@@ -1,0 +1,412 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    position: absolute;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url(../imagens/fundo.png);
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Cantarell', sans-serif;
+}
+
+.pedido{
+    float: left;
+    width: 45%;
+}
+
+    .botoes{
+        width: 41vw;
+        margin-left: 2vw;
+        padding-bottom: 15px;
+    }
+
+    .carrinho{
+        background-color: transparent;
+        border: 2px solid orange;
+        text-shadow: 2px 2px 8px #00000088;
+        box-shadow: 2px 2px 8px #0000004f;
+        padding: 20px;
+        width: 41vw;
+        margin-left: 2vw;
+        margin-top: 2vw;
+        border-radius: 20px 20px 0px 0px;
+        margin-bottom: 5px;
+    }
+
+    .carrinho h2{
+        font-family: 'Cantarell', sans-serif;
+        color: orange;
+        font-weight: 100;
+        width: 100%;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+.info-single-checkout{
+    font-family: 'Manrope', sans-serif;
+    background-color: #ffffff0c;
+    color: white;
+    box-shadow: 2px 2px 8px #0000004f;
+    border-radius: 18px;
+    height: 123px;
+    width: 95%;
+    border: 3px solid transparent;
+    margin: 10px auto;
+}
+
+.info-single-checkout img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 18px;
+    margin: 10px;
+    display: block;
+}
+
+.info-single-checkout .nomeprodutocarrinho{
+    margin-top: 20px;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: left;
+    width: 73%;
+    display: inline-block;
+}
+
+.info-single-checkout .precoprodutocarrinho{
+    display: block;
+    color: #ffffffa4;
+    float: left;
+    width: 40%; 
+    font-size: 1.2em;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.btnrmv{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+    .btnrmv:hover, .btnadd:hover{
+        transition: 0.5s;
+        cursor: pointer;
+        background-color: #fc891d;
+        border: 2px solid  #f88316;
+        color: black;
+        box-shadow: 2px 2px 8px #0000002c;
+    }
+
+    .btnrmv:active, .btnadd:hover{
+        background-color: #f8a251;
+        border: 2px solid  #ffa047;
+        color: rgb(53, 53, 53);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.486);
+    }
+
+.btnadd{ 
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+    
+.quantidade-no-carrinho{
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+#totalCarrinho{
+    background-color: transparent;
+    border: 2px solid orange;
+    text-shadow: 2px 2px 8px #00000088;
+    box-shadow: 2px 2px 8px #0000004f;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    width: 41vw;
+    height: 64px;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.limparcarrinhobtn, #back{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    box-shadow: 2px 2px 8px #00000034;
+    display: inline;
+    float: left;
+    width: 20vw;
+    height: 9vh;
+    margin-top: 16px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+    .limparcarrinhobtn:hover, #back:hover{
+        transition: 0.5s;
+        cursor: pointer;
+        background-color: #fc891d;
+        border: 2px solid  #f88316;
+        color: black;
+        box-shadow: 2px 2px 8px #0000002c;
+    }
+
+    .limparcarrinhobtn:active, #back:active{
+        background-color: #f8a251;
+        border: 2px solid  #ffa047;
+        color: #353535;
+        box-shadow: 2px 2px 8px #0000007c;
+    }
+
+#back{
+    margin-left: 1vw;
+}
+
+
+.confirmarpedido{
+    cursor: pointer;
+    background-color: #fa7900;
+    border: 2px solid  #f07401;
+    color: #000000c5;
+    box-shadow: 2px 2px 8px #0000002c;
+    width: 41vw;
+    height: 9vh;
+    margin-top: 8px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+    .confirmarpedido:hover{
+        background-color: #e45b00;
+        border: 2px solid  #e45b00;
+        color: black;
+        box-shadow: 4px 4px 10px #0000005d;
+    }
+
+    .confirmarpedido:active{
+        background-color: #ff891b;
+        border: 2px solid  #ff7b00;
+        color: black;
+        box-shadow: 4px 4px 10px #00000069;
+    }
+
+.mostrar{
+    float: right;
+    width: 55%;
+    display: block;
+    opacity: 0;
+    transform: translateX(300px);
+    transition: opacity 2s ease, transform 0.7s ease;
+}
+
+    .numpedido{
+        background-color: #ffffff2a;
+        border: 2px solid #dbd9d117;
+        font-family: sans-serif;
+        width: 35vw;
+        margin: 30px auto 60px;
+        border-radius: 30px;
+        padding: 20px;
+        font-size: 1.5em;
+        font-family: 'Cantarell', sans-serif;
+    }
+
+    #txtPedido{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #idPedido{
+        font-size: 80px;
+        color: orangered;
+        font-size: bolder;
+        text-shadow: 5px 5px 10px #0000007a;
+        text-align: center;
+    }
+
+    #nomeCliente{
+        font-size: 24px;
+    }
+
+    #totalPedido{
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .aviso{
+        background-color: #ffffff48;
+        border: 2px solid #dbd9d12c;
+        width: 35vw;
+        margin: auto;
+        margin-top: -5vh;
+        border-radius: 3px;
+        padding: 20px;
+        font-size: 24px; 
+    }
+
+        .aviso ul li{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 15px;
+            line-height: 26px;
+        }
+
+    .voltar, .imprimir2via{
+        background-color: transparent;
+        border: 2px solid #ff7300;
+        box-shadow: 2px 2px 8px #00000042;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: auto;
+        display: inline-block;
+        margin-top: 35px;
+        margin-bottom: 10px;
+    }
+
+    .voltar{
+        margin-left: 320px;
+    }
+
+    .imprimir2via{
+        margin-left: 10px;
+    }
+
+        .voltar:hover, .imprimir2via:hover{
+            cursor: pointer;
+            background-color: #fcb51d;
+            border: 2px solid  #f89616;
+            box-shadow: 2px 2px 8px #00000050;
+        }
+
+        .voltar:active, .imprimir2via:active{
+            background-color: #fc891d;
+            border: 2px solid  #f88316;;
+            box-shadow: 2px 2px 8px #0000007c;
+        }
+
+    .voltar img, .imprimir2via img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .bomapetite{
+        width: 400px;
+        height: 80px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+        .bomapetite .img{
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+        }
+
+        .bomapetite .img img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .bomapetite p{
+            display: block;
+            float: right;
+            margin: 0;
+            padding-top: 12px;
+            width: 300px;
+            font-size: 42px;
+            font-family: 'Petit Formal Script', cursive;
+            color: white;
+        }
+
+.pedidoconfirmado{
+    display: none;
+    width: 45vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #2e2e2ee1;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.4s ease;
+}
+
+.icone{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 153, 0);
+    margin: auto;
+    position: relative;
+    top: 40%;
+    border: 4px solid #ff6600;
+}
+
+    .icone img{
+        width: 50%;
+        height: 50%;
+        position: relative;    
+        top: 25%;
+        left: 25%;
+    }
+
+.cupom{
+    display: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track-piece {
+    cursor: pointer;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #413d38;
+    border-radius: 5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu Pedido!</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/pedido.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="montarpedido">
+            <div class="mensagem">
+                <p>Selecione os itens e quantidades que deseja.</p>
+            </div>
+
+            <section class="vitrine">
+                <div id="produtosLanches">
+                    <h2>Esfirra Aberta</h2>
+                </div>
+            
+                <div id="produtosBebidas">
+                    <h2>Picolés</h2>
+                </div>
+            </section>
+
+            <section class="carrinho">
+                <div id="carrinho"></div>
+            </section>
+        </section>    
+    </main>
+
+    <section id="container">
+        <section class="nome">
+            <form id="cliente" action="carrinho.html" method="post">
+                <label for="nome" class="nomecompleto">Nome completo:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                <input type="submit" value="OK">
+            </form>
+        </section>
+
+        <section class="limparcarrinho">
+            <a href="index.html">
+                <button class="limparcarrinhobtn" onclick="limparCarrinho()">Cancelar</button>
+            </a>
+        </section>
+
+        <section class="visualizarpedido">
+            <button id="visualizarPedidoButton" onclick="redirecionarParaCarrinho()">(R$ 0.00) Visualizar Pedido 🡢</button>
+        </section>
+    </section>
+
+    <script src="js/pedido.js"></script>
+</body>
+</html>
