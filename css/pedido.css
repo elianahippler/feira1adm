@@ -48,7 +48,7 @@ main .montarpedido .mensagem{
     margin: auto;
 }
 
-#produtosLanches h2, #produtosBebidas h2{
+#produtosLanches h2, #produtosBebidas h2, #produtosDoces h2{
     background-color: transparent;
     border: 2px solid orange;
     color: orange;
@@ -62,9 +62,9 @@ main .montarpedido .mensagem{
     text-transform: uppercase;
 }
 
-#produtosLanches, #produtosBebidas{
-    width: 550px;
-    margin-left: 4%;
+#produtosLanches, #produtosBebidas, #produtosDoces{
+    width: 380px;
+    margin-left: 2%;
     display: grid;
     float: left;
 }
@@ -186,7 +186,7 @@ main .montarpedido .mensagem{
     text-shadow: 2px 2px 8px #00000088;
     box-shadow: 2px 2px 8px #0000004f;
     float: left;
-    margin-left: 4%;
+    margin-left: 2%;
     font-size: 1.2em;
     width: 540px;
     height: 57px;
@@ -238,7 +238,7 @@ main .montarpedido .mensagem{
 }
 
 .limparcarrinhobtn{
-    margin-left: 180px;
+    margin-left: 215px;
     background-color: transparent;
     border: 2px solid grey;
     color: grey;
@@ -274,7 +274,7 @@ main .montarpedido .mensagem{
     color: #000000c5;
     box-shadow: 2px 2px 8px #0000002c;
     float: right;
-    margin-right: 2%;
+    margin-right: 2.3%;
     display: block;
     width: 320px;
     height: 57px;

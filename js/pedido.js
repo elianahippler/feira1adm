@@ -10,7 +10,13 @@ const bebidas = [
     {id: 5, nome: 'Picolé de Leite', img: '../feira1adm/imagens/produtos/leite.jpg', preco: 2.50, quantidade: 0},
 ];
 
-const allItems = lanches.concat(bebidas);
+const doces = [
+    {id: 6, nome: 'Coca-cola', img: '../feira1adm/imagens/produtos/coca.jpg', preco: 5.00, quantidade: 0},
+    {id: 7, nome: 'Guaraná', img: '../feira1adm/imagens/produtos/guarana.jpg', preco: 5.00, quantidade: 0},
+    {id: 8, nome: 'Fanta', img: '../feira1adm/imagens/produtos/fanta.jpg', preco: 5.00, quantidade: 0},
+];
+
+const allItems = lanches.concat(bebidas, doces);
 
 document.getElementById("cliente").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -163,6 +169,7 @@ visualizarPedidoButton.addEventListener('click', function () {
 
 inicializarLoja(lanches, 'produtosLanches');
 inicializarLoja(bebidas, 'produtosBebidas');
+inicializarLoja(doces, 'produtosDoces');
 inicializarCarrinhoDoLocalStorage();
 atualizarCarrinho();
 calcularEExibirTotalCarrinho();
